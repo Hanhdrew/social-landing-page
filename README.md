@@ -51,7 +51,7 @@ A full redesign built with modern best practices.
 
 **Highlights:**
 
-- Contemporary UI design
+- Modern UI design
 - Responsive layout for all devices
 - Improved accessibility
 - Cleaner, modular code
@@ -65,13 +65,9 @@ This is the recommended version for use.
 
 ## 🛠️ Technologies Used
 
-_(Update this section based on your stack)_
-
 - HTML5
-- CSS3 / Modern CSS (Flexbox, Grid)
+- Modern CSS
 - JavaScript (ES6+)
-- Responsive Design Principles
-- Web Accessibility Best Practices
 
 ---
 
