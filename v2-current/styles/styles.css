@@ -15,3 +15,54 @@
 
   --border-subtle: rgba(255, 255, 255, 0.08);
 }
+
+body {
+  background-color: var(--bg-top);
+  color: var(--text-primary);
+  padding: 5px;
+}
+
+main {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+header,
+section,
+footer {
+  border: 1px solid blue;
+  padding: 5px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-container-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.social-container-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  padding: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+}
