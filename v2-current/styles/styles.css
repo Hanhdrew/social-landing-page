@@ -20,6 +20,11 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 *,
 *::before,
 *::after {
@@ -48,14 +53,22 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
   position: relative;
-  border: 1px solid red;
   padding: 5px;
   width: 70%;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 main::after,
 main::before {
+  border-radius: inherit;
   content: "";
   position: absolute;
   height: 100%;
@@ -63,10 +76,21 @@ main::before {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  background-image: conic-gradient(#3b82f6, #60a5fa, #1d4ed8, #3b82f6);
+  background-image: conic-gradient(
+    from var(--angle),
+    #3b82f6,
+    #60a5fa,
+    #1d4ed8,
+    #3b82f6
+  );
   z-index: -1;
   padding: 10px;
-  /* padding will control thickness of border */
+  animation: 3s spin linear infinite;
+  -webkit-animation: 3s spin linear infinite;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
 }
 
 main::before {
@@ -78,8 +102,13 @@ main::before {
 header,
 section,
 footer {
-  border: 1px solid blue;
+  border-radius: 1rem;
   padding: 5px;
+  background-color: var(--surface);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 header {
@@ -87,6 +116,23 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+img {
+  object-position: 10px 30%;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.img-wrapper {
+  height: 200px;
+  width: 200px;
 }
 
 .social-container-parent {
